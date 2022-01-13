@@ -53,6 +53,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // Controllers
+const gamesController = require('./controllers/games')
 const newPostController = require('./controllers/newPost');
 const singlePostController = require('./controllers/singlePost');
 const blogsController = require('./controllers/blogs');
