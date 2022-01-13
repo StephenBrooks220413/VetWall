@@ -1,0 +1,45 @@
+<!doctype HTML>
+<html lang="en">
+<%- include('layouts/header')%>
+<body>
+<%- include('layouts/navbar')%>
+
+<div class="masthead text-center"
+     style="background-image: url('<%= blogpost.image %>')">
+    <h1 class="display-2 text-white">
+        <%= blogpost.title%>
+    </h1>
+</div>
+
+<div class="container mt-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb lead">
+          <li class="breadcrumb-item"><a href="/blogs">Articles</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            <%= blogpost.title%>
+          </li>
+        </ol>
+    </nav>
+</div>
+
+<div class="container mt-5 mb-5">
+
+    <div class="card p-5">
+        <h1><%= blogpost.title%></h1>
+
+        <p class="lead">
+            <%= blogpost.article %>
+        </p>
+
+        <small>
+            Posted By <%= blogpost.userid.username %>
+            On <%= blogpost.datePosted.toDateString() %>
+        </small>
+    </div>
+
+</div>
+
+<%- include('layouts/footer')%>
+</body>
+<%- include('layouts/scripts')%>
+</html>

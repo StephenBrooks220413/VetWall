@@ -1,0 +1,77 @@
+<!doctype HTML>
+<html lang="en">
+<%- include('layouts/header')%>
+<body>
+<%- include('layouts/navbar')%>
+
+<div class="intro-image">
+    <div class="container text-white text-center">
+        <h1 class="display-3">VetWall of Heroes</h1>
+        <h2 class="display-5">
+            Welcome To the Wall
+        </h2>
+    </div>
+</div>
+
+<div class="container text-center mt-5 mb-5">
+    <h1 class="display-5">Recent Activity</h1>
+    <div class="row">
+        <div class="col-md">
+            <img src="https://images.unsplash.com/photo-1541899402552-78b4aa9a317e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjV8fHZldGVyYW5zfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=400&q=60" 
+            alt="vets" class="img-thumbnail m-2">
+        </div>
+        <div class="col-md">
+            <img src="https://media.istockphoto.com/photos/excited-child-sitting-with-american-flag-on-shoulders-of-father-with-picture-id1333389184?b=1&k=20&m=1333389184&s=170667a&w=0&h=CXANmvDJBVlLBj5DIYnqhRkJisPKulAP-hrb8twZ25Y=" 
+            alt="vets" class="img-thumbnail m-2">
+        </div>
+        <div class="col-md">
+            <img src="https://media.istockphoto.com/photos/korean-war-and-vietnam-veteran-in-a-field-of-american-flags-picture-id1345859966?b=1&k=20&m=1345859966&s=170667a&w=0&h=9bKXZ7vLMXtGAG1C66YBO-JQKiGrmfIfkJMpc5HFL-Y=" 
+            alt="vets" class="img-thumbnail m-2">
+        </div>
+        <div class="col-md">
+            <img src="https://media.istockphoto.com/photos/adult-military-woman-smiling-during-group-therapy-discussion-picture-id1319713493?b=1&k=20&m=1319713493&s=170667a&w=0&h=UJh0NGK1Co3UCzwJQLGwL-G3lLm-31R6y8A4fc_VHmU=" 
+            alt="vets" class="img-thumbnail m-2">
+        </div>
+    </div>
+</div>
+
+<div class="container mt-5 mb-5">
+    <div class="row p-3">
+        <div class="col-md mb-3">
+            <h2>Members</h2>
+            <p class="lead">
+                Share your stories and thoughts with other veterans.
+            </p>
+            <a href="/auth/login" class="btn btn-outline-dark">Signup</a>
+        </div>
+        <div class="col-md mb-3">
+            <img src="https://images.unsplash.com/photo-1495467270795-cf51cd29f1b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1091&q=80" 
+                class="img-fluid shadow-2-strong rounded" 
+                alt="soldier" 
+            />
+        </div>
+    </div>
+</div>
+
+<div class="container text-center mt mb-5">
+    <div class="row">
+        <h1>Wanting To Read Some Articles?</h1>
+        <p class="lead">
+            Cool, we have a few for you then. If you'd like, register and create one of your own.
+        </p>
+        <a href="/blogs" style="width: 200px; margin-left: auto; margin-right: auto;" class="btn btn-outline-dark">Write An Article</a>
+        
+        <div class="col-md-12 mt-3">
+            <img src="https://media.istockphoto.com/photos/close-up-of-a-business-woman-using-computer-mouse-picture-id1278319058?b=1&k=20&m=1278319058&s=170667a&w=0&h=x7cqEYd9ZCSVMMH2kPNbT5k3Zcj0QuCht9nuxFWtt5M=" 
+                class="img-thumbnail"
+                alt="create" 
+                style="height:210px"
+            />
+        </div>
+    </div>
+</div>
+
+<%- include('layouts/footer')%>
+</body>
+<%- include('layouts/scripts')%>
+</html>

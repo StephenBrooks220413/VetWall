@@ -1,0 +1,28 @@
+<!doctype HTML>
+<html lang="en">
+<%- include('layouts/header')%>
+<body>
+<%- include('layouts/navbar')%>
+
+<div class="container mt-5 mb-5">
+    <h1 class="display-3 mb-3">Member Login</h1>
+    <p class="lead">
+        Don't have an account? <a href="/auth/register">Register here.</a>
+    </p>
+    <form action="/users/login" method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" class="form-control" name="username" id="username" >
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" class="form-control" name="password" id="password" >
+          </div>
+          <button type="submit" class="btn mt-3 btn-outline-success form-control">Login</button>
+    </form>
+</div>
+
+<%- include('layouts/footer')%>
+</body>
+<%- include('layouts/scripts')%>
+</html>

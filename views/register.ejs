@@ -1,0 +1,37 @@
+<!doctype HTML>
+<html lang="en">
+<%- include('layouts/header')%>
+<body>
+<%- include('layouts/navbar')%>
+
+<div class="container mt-5 mb-5">
+    <h1 class="display-3 mb-3">Register Page</h1>
+    <p class="lead">
+        Already have an account? <a href="/auth/login">Login here.</a>
+    </p>
+    <% if(errors != null && errors.length >0) { %> 
+      <ul class="list-group">
+        <% for(let i = 0; i < errors.length; i++){ %> 
+          <li class="list-group-item list-group-item-danger">
+            <%= errors[i] %>
+          </li>
+        <% } %>
+      </ul>
+    <% } %>
+    <form action="/users/register" method="post" enctype="multipart/form-data">
+          <div class="mb-3">
+            <label for="username" class="form-label">Username</label>
+            <input type="text" value="<%= username %>" class="form-control" name="username" id="username" >
+          </div>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" value="<%= password %>" class="form-control" name="password" id="password" >
+          </div>
+          <button class="btn mt-3 btn-outline-success form-control">Register</button>
+    </form>
+</div>
+
+<%- include('layouts/footer')%>
+</body>
+<%- include('layouts/scripts')%>
+</html>

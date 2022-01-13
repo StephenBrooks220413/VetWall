@@ -1,0 +1,30 @@
+<!doctype HTML>
+<html lang="en">
+<%- include('layouts/header')%>
+<body>
+<%- include('layouts/navbar')%>
+
+<div class="container mt-5 mb-5">
+    <h1 class="display-3 pb-4">Articles Page</h1>
+
+    <% for(let i = 0; i < blogposts.length; i++ ){ %>
+    <div class="jumbotron mb-1 p-5">
+        <a href="/post/<%= blogposts[i]._id %>">
+            <h2><%= blogposts[i].title %></h2>
+        </a>
+        
+        <img src="<%= blogposts[i].image %>" style="height:210px" alt="<%= blogposts[i].title %>">
+
+        <p class="lead">
+            Posted By <%= blogposts[i].userid.username %>
+            On <%= blogposts[i].datePosted.toDateString() %>
+        </p>
+        <hr />
+    </div>
+    <% } %>
+</div>
+
+<%- include('layouts/footer')%>
+</body>
+<%- include('layouts/scripts')%>
+</html>
